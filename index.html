@@ -185,10 +185,11 @@ footer a { color: var(--accent-gold); text-decoration: none; }
     <p class="hero-kicker">FIT2179 · Data Visualisation 2 · Malaysia Tourism</p>
     <h1>Which Malaysian State<br><em>Draws the Crowds?</em></h1>
     <p class="hero-lead">
-      From the highland rainforests of Pahang to the towers of Kuala Lumpur, Malaysia's
-      states compete for every tourist ringgit. Using the latest 2024 Tourism Malaysia
-      Domestic Tourism Survey, this visualisation charts who visits, where they go,
-      how long they stay — and which states punch above their weight.
+      Malaysia's states compete for every tourist ringgit.
+      Using the 2024 Domestic Tourism Survey,
+      this visualisation charts who visits, where they go,
+      how long they stay — and which states
+      punch above their weight.
     </p>
     <div class="hero-stats">
       <div>
@@ -249,9 +250,10 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 01 — Geographic Overview</p>
   <h2 class="section-title">Visitor Intensity Across the Peninsula & Borneo</h2>
   <p class="section-body">
-    Domestic tourist arrivals per 1,000 residents reveal which states are holiday
-    magnets relative to their population size. Selangor and Kuala Lumpur lead in raw
-    numbers, but Melaka and Pahang attract far more visitors than their populations suggest.
+    Domestic arrivals per 1,000 residents reveal which states
+    are holiday magnets. Selangor and Kuala Lumpur lead in raw
+    numbers, but Melaka and Pahang attract visitors far beyond
+    what their population size alone would suggest.
   </p>
   <div class="chart-card">
     <div class="chart-title">Domestic visitor arrivals per 1,000 residents, 2024</div>
@@ -268,7 +270,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
     <div style="margin-top:.6rem;">
       <svg id="legend-svg" width="100%" height="32" style="display:block;max-width:320px;"></svg>
     </div>
-    <div class="chart-source">Source: Tourism Malaysia, Jadual Penerbitan DTS 2024 (Jadual 9); Jabatan Perangkaan Malaysia (population estimates)</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 9; Jabatan Perangkaan Malaysia</div>
   </div>
 
   <div class="three-col" style="margin-bottom:1.5rem;">
@@ -293,14 +295,20 @@ footer a { color: var(--accent-gold); text-decoration: none; }
 <section id="sec-trend" class="section page">
   <p class="section-label">§ 02 — National Pulse</p>
   <h2 class="section-title">Tourism's Long Road Back: 2017–2024</h2>
-  <p class="section-body">
-    Total visitors and expenditure collapsed during the pandemic, then staged a
-    remarkable multi-year recovery. By 2024, both metrics had surpassed pre-pandemic
-    peaks, with expenditure reaching RM106.7 billion — a new all-time high.
-  </p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem;align-items:start;">
+    <p class="section-body" style="margin-bottom:0;">
+      Visitors and spending collapsed during the pandemic,
+      then staged a remarkable recovery.
+      By 2024, expenditure hit RM106.7 billion —
+      a new all-time high.
+    </p>
+    <div class="annotation" style="margin:0;">
+      <strong>Record-breaking 2024:</strong> At RM106.7 billion,<br>expenditure exceeded the 2019 peak<br>of RM103.2 billion for the first time.<br>A 25.7% jump from 2023 alone.
+    </div>
+  </div>
   <div class="chart-card">
     <div class="chart-title">Total domestic visitor-trips & expenditure, 2017–2024</div>
-    <div class="chart-sub">Two axes: visitor trips (left) and total expenditure in RM billion (right)</div>
+    <div class="chart-sub">Visitor-trips (left axis) · Expenditure in RM billion (right axis)</div>
     <div style="display:flex;gap:1.5rem;margin-bottom:1rem;font-size:.78rem;">
       <span style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#0072B2;display:inline-block;border-radius:2px;"></span> Visitor-trips ('000)</span>
       <span style="display:flex;align-items:center;gap:6px;"><span style="width:16px;height:3px;background:#E69F00;border-top:2px dashed #E69F00;display:inline-block;"></span> Expenditure (RM billion)</span>
@@ -308,11 +316,9 @@ footer a { color: var(--accent-gold); text-decoration: none; }
     <div style="position:relative;height:300px;">
       <canvas id="lineChart" role="img" aria-label="Line chart: domestic visitor-trips rose from 276M in 2017 to 332M in 2019, crashed to 72M in 2021, recovered to 298M in 2024. Expenditure hit RM106.7B in 2024, a new record.">Trips: 2017=276M, 2018=302M, 2019=332M, 2020=147M, 2021=72M, 2022=208M, 2023=241M, 2024=298M. Spend: 2017=83B, 2019=103B, 2021=18B, 2024=107B.</canvas>
     </div>
-    <div class="chart-source">Source: Tourism Malaysia, Jadual 1 (2024 edition)</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 1</div>
   </div>
-  <div class="annotation">
-    <strong>Record-breaking 2024:</strong> At RM106.7 billion, total tourism expenditure in 2024 exceeded the previous 2019 peak of RM103.2 billion for the first time since the pandemic — a 25.7% jump from 2023 alone.
-  </div>
+
 </section>
 
 <div class="divider page"></div>
@@ -322,15 +328,15 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 03 — State Rankings</p>
   <h2 class="section-title">How State Rankings Shifted: 2019 → 2024</h2>
   <p class="section-body">
-    Some states outpaced the national recovery while others slipped in the rankings.
-    Melaka climbed dramatically — from 8th in 2019 to 4th in 2024 — while Sabah and
-    Perlis also gained ground. Kedah and Perak fell back.
+    Some states outpaced the recovery; others slipped.
+    Melaka climbed from 8th to 4th place.
+    Sabah and Perlis rose. Kedah and Perak fell.
   </p>
   <div class="chart-card">
     <div class="chart-title">State rank by domestic visitor arrivals, 2019 versus 2024</div>
-    <div class="chart-sub">Purple = climbed in rank · Orange = fell in rank · Rank 1 = most visited</div>
+    <div class="chart-sub">Purple = climbed · Orange = fell · Rank 1 = highest</div>
     <svg id="slope-svg" viewBox="0 0 700 440" role="img" aria-label="Slope graph showing Melaka rising from rank 8 to rank 4, Selangor and KL maintaining top positions, while Kedah fell from rank 3 to 6"></svg>
-    <div class="chart-source">Source: Tourism Malaysia, Jadual 9 (2019 & 2024 editions)</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 9</div>
   </div>
 </section>
 
@@ -341,15 +347,15 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 04 — Spending Patterns</p>
   <h2 class="section-title">Where the Money Goes</h2>
   <p class="section-body">
-    Shopping tops the list of tourist expenditure at 37.4% of the total in 2024. Looking
-    back to 2019, fuel's share climbed during the recovery years while accommodation
-    spending contracted — reflecting how travel behaviour shifted as Malaysians resumed
-    domestic trips post-pandemic.
+    Shopping dominates at 37.4% of total expenditure in 2024.
+    Looking back to 2019, fuel's share climbed during recovery
+    while accommodation contracted — reflecting how Malaysians
+    shifted their travel behaviour after the pandemic.
   </p>
   <div class="two-col">
     <div class="chart-card">
       <div class="chart-title">Domestic visitor expenditure by component, 2024</div>
-      <div class="chart-sub">Share of RM106.7 billion total spend · Hover a segment for details</div>
+      <div class="chart-sub">Share of RM106.7B total spend · Hover for details</div>
       <div style="display:flex;justify-content:center;">
         <div style="position:relative;width:300px;height:300px;">
           <canvas id="donutChart" role="img"
@@ -367,12 +373,12 @@ footer a { color: var(--accent-gold); text-decoration: none; }
         <span style="display:flex;align-items:center;gap:5px;font-size:.75rem;color:#5c4f3d;"><span style="width:10px;height:10px;border-radius:2px;background:#CC79A7;display:inline-block;flex-shrink:0;"></span>Accommodation 11.2%</span>
         <span style="display:flex;align-items:center;gap:5px;font-size:.75rem;color:#5c4f3d;"><span style="width:10px;height:10px;border-radius:2px;background:#888888;display:inline-block;flex-shrink:0;"></span>Transport 6.7%</span>
       </div>
-      <div class="chart-source">Source: Jadual 6, DTS 2024</div>
+      <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 6</div>
     </div>
 
     <div class="chart-card">
       <div class="chart-title">Historical shift of expenditure components, 2019–2024</div>
-      <div class="chart-sub">Shopping's dominance persisted 2019–2024; fuel rose during recovery years while accommodation share contracted</div>
+      <div class="chart-sub">Shopping led throughout · Fuel rose during recovery · Accommodation share fell</div>
       <div style="margin-bottom:.85rem;display:flex;gap:8px 14px;flex-wrap:wrap;font-size:.73rem;">
         <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#E69F00;display:inline-block;"></span>Shopping</span>
         <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#009E73;display:inline-block;"></span>Food & Beverage</span>
@@ -400,7 +406,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
           </svg>
         </div>
       </div>
-      <div class="chart-source">Source: Jadual 6, DTS 2019–2024</div>
+      <div class="chart-source">Source: Tourism Malaysia DTS 2019–2024, Jadual 6</div>
     </div>
   </div>
 </section>
@@ -412,15 +418,15 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 05 — State-Level Arrivals</p>
   <h2 class="section-title">Which States Gained the Most Visitors?</h2>
   <p class="section-body">
-    The lollipop chart ranks all 16 states and territories by absolute visitor arrivals
-    in 2024. Selangor alone drew 34.5 million visitors — more than one in eight of
-    all domestic visitors nationally.
+    All 16 states ranked by 2024 domestic arrivals.
+    Selangor drew 34.5 million visitors —
+    one in every eight tourists nationally.
   </p>
   <div class="chart-card">
     <div class="chart-title">Domestic visitor arrivals by state, 2024 ('000)</div>
-    <div class="chart-sub">Actual figures from Jadual 9, Tourism Malaysia DTS 2024</div>
+    <div class="chart-sub">Ranked by arrivals · Hover flag for exact figures</div>
     <div id="lollipop-chart"></div>
-    <div class="chart-source">Source: Jadual 9, DTS 2024</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 9</div>
   </div>
 </section>
 
@@ -431,13 +437,14 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 06 — Travel Flows</p>
   <h2 class="section-title">Who Travels Where? Origin–Destination of Overnight Tourists</h2>
   <p class="section-body">
-    The origin–destination matrix from Jadual 10 maps actual overnight tourist flows
-    between states in 2024. Selangor residents dominate outbound flows nationwide,
-    while Sabah and Sarawak show strong self-contained patterns within Borneo.
+    This matrix maps overnight tourist flows between states.
+    Selangor residents dominate outbound travel.
+    Sabah and Sarawak show strong
+    self-contained patterns within Borneo.
   </p>
   <div class="chart-card">
     <div class="chart-title">Overnight tourist flows between states, 2024 ('000)</div>
-    <div class="chart-sub">Rows = origin state · Columns = destination state · Darker = higher flow</div>
+    <div class="chart-sub">Rows = origin · Columns = destination · Darker = more flow</div>
     <div class="heatmap-wrap">
       <table class="heatmap-table">
         <colgroup id="heatmap-colgroup"></colgroup>
@@ -449,7 +456,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
       <canvas id="heatmap-legend-canvas" width="200" height="24" style="border-radius:3px;"></canvas>
     </div>
     <div style="font-size:.72rem;color:#9e8e78;margin-top:.3rem;">Hover any cell to see exact flow in thousands · Diagonal cells (same origin & destination) are excluded</div>
-    <div class="chart-source">Source: Jadual 10, DTS 2024 (actual figures)</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 10</div>
   </div>
 </section>
 
@@ -460,13 +467,14 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 07 — Stay × Spend × Volume</p>
   <h2 class="section-title">Overnight Stays versus Average Trip Expenditure</h2>
   <p class="section-body">
-    Plotting average overnight trips per visitor against average trip spending, with
-    bubble size encoding total arrivals, reveals three tourism profiles: nature
-    immersion states with long stays, urban transit hubs, and balanced leisure destinations.
+    Overnight share plotted against average spending,
+    with bubble size showing total arrivals.
+    Three profiles emerge: nature immersion states,
+    urban hubs, and balanced leisure destinations.
   </p>
   <div class="chart-card">
     <div class="chart-title">Overnight trip share × average spend (RM), by total arrivals</div>
-    <div class="chart-sub">x = overnight trip share (%) · y = average expenditure per trip (RM) · size = arrivals ('000)</div>
+    <div class="chart-sub">x = overnight share · y = avg spend (RM) · size = arrivals</div>
     <div style="position:relative;height:380px;">
       <canvas id="bubbleChart" role="img" aria-label="Bubble chart showing states by overnight trip share, spending and visitor volume. Sabah and Pahang show high overnight share. Selangor is largest bubble.">State tourism profiles by overnight share, spending and volume.</canvas>
     </div>
@@ -497,7 +505,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
         </div>
       </div>
     </div>
-    <div class="chart-source">Source: Jadual 3 & 9, DTS 2024</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 3 & 9</div>
   </div>
 </section>
 
@@ -508,9 +516,10 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 08 — Who Travels & Why</p>
   <h2 class="section-title">Purpose of Visit & Visitor Demographics</h2>
   <p class="section-body">
-    Visiting relatives and friends remains the dominant purpose (34.6%), but shopping
-    (27.6%) and leisure (14.6%) follow closely. The demographic profile shifted in 2024
-    — older age groups (40+) are now a larger share of the travelling public.
+    Visiting relatives and friends remains the top purpose (34.6%),
+    followed by shopping (27.6%) and leisure (14.6%).
+    Older age groups (40+) now make up a larger share
+    of the travelling public than in previous years.
   </p>
   <div class="two-col">
     <div class="chart-card">
@@ -519,12 +528,12 @@ footer a { color: var(--accent-gold); text-decoration: none; }
       <div style="position:relative;height:300px;">
         <canvas id="purposeChart" role="img" aria-label="Bar chart: Visiting relatives 34.6%, Shopping 27.6%, Holiday 14.6%, Incentive 10.7%, Entertainment 5.7%, Medical 4.5%, Religious 1.5%, Business 0.8%">Trip purpose 2024 breakdown.</canvas>
       </div>
-      <div class="chart-source">Source: Jadual 7, DTS 2024</div>
+      <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 7</div>
     </div>
 
     <div class="chart-card">
       <div class="chart-title">Age group profile of domestic visitors, 2017–2024</div>
-      <div class="chart-sub">Percentage share by age band — the 40–54 and 55+ segments have grown steadily every year</div>
+      <div class="chart-sub">Age share per year · 40–54 and 55+ segments grew steadily</div>
       <div style="margin-bottom:.75rem;display:flex;gap:.75rem;font-size:.75rem;flex-wrap:wrap;">
         <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#FDDCB5;display:inline-block;"></span>15–24</span>
         <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#F0954A;display:inline-block;"></span>25–39</span>
@@ -550,7 +559,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
           </svg>
         </div>
       </div>
-      <div class="chart-source">Source: Jadual 13, DTS 2017–2024 editions</div>
+      <div class="chart-source">Source: Tourism Malaysia DTS 2017–2024, Jadual 13</div>
     </div>
   </div>
 </section>
@@ -561,9 +570,10 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 09 — Urban versus Rural</p>
   <h2 class="section-title">The Urban–Rural Divide in Domestic Tourism</h2>
   <p class="section-body">
-    Urban visitors consistently dominate domestic tourism, but rural travellers spend
-    disproportionately more per trip and drive a growing share of overnight stays.
-    Select a view below to compare how the urban–rural split has shifted from 2019 to 2024.
+    Urban visitors dominate domestic tourism.
+    Yet rural travellers spend more per trip.
+    Toggle the view to compare shifts
+    from 2019 to 2024.
   </p>
   <div class="chart-card">
     <div class="chart-title">Urban versus Rural Split, 2019–2024</div>
@@ -599,8 +609,31 @@ footer a { color: var(--accent-gold); text-decoration: none; }
         </svg>
       </div>
     </div>
-    <div id="ur-annotation" class="annotation" style="margin-top:1rem;"></div>
-    <div class="chart-source">Source: Jadual 2, 3 & 5, DTS 2019–2024 editions</div>
+    <div id="ur-annotation" class="annotation" style="margin-top:1rem;display:none;"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1rem;">
+      <div style="background:var(--paper-warm);border-left:3px solid #20639B;padding:.75rem 1rem;border-radius:0 6px 6px 0;font-size:.8rem;color:var(--ink-muted);">
+        <strong style="color:var(--ink);display:block;margin-bottom:.3rem;">Visitor share</strong>
+        Urban trips exceeded 80%
+        every year since 2019.
+        Share edged from 80.2%
+        to 82.1% by 2024.
+      </div>
+      <div style="background:var(--paper-warm);border-left:3px solid #20639B;padding:.75rem 1rem;border-radius:0 6px 6px 0;font-size:.8rem;color:var(--ink-muted);">
+        <strong style="color:var(--ink);display:block;margin-bottom:.3rem;">Expenditure share</strong>
+        Urban areas generate ~82%
+        of total expenditure —
+        closely matching their
+        visitor share.
+      </div>
+      <div style="background:var(--paper-warm);border-left:3px solid #E9C46A;padding:.75rem 1rem;border-radius:0 6px 6px 0;font-size:.8rem;color:var(--ink-muted);">
+        <strong style="color:var(--ink);display:block;margin-bottom:.3rem;">Overnight spend</strong>
+        Rural tourists spent RM857
+        per trip in 2024 — up 40%
+        from RM612 in 2019.
+        43% more than urban (RM600).
+      </div>
+    </div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2019–2024, Jadual 2, 3 & 5</div>
   </div>
 </section>
 
@@ -612,14 +645,15 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   <p class="section-label">§ 10 — Conclusion</p>
   <h2 class="section-title">Which State is the Best for Tourism?</h2>
   <p class="section-body">
-    No single state wins on every dimension. This radar chart scores the top 8 states
-    across five key tourism dimensions — volume, spending power, growth momentum,
-    overnight appeal, and visitor intensity — to reveal each state's overall tourism profile.
-    Select a state from the dropdown to highlight it on the chart.
+    No single state wins on every dimension.
+    States are scored across five measures:
+    volume, spending, growth, overnight appeal,
+    and visitor intensity. Select a state
+    to highlight its profile.
   </p>
   <div class="chart-card">
     <div class="chart-title">Multi-dimensional tourism scorecard, 2024</div>
-    <div class="chart-sub">Scores normalised 0–10 across five dimensions · Data from Jadual 3, 5 & 9, DTS 2024</div>
+    <div class="chart-sub">Scores normalised 0–10 across five dimensions</div>
     <div class="filter-row">
       <label>Highlight state:</label>
       <select id="radar-select">
@@ -651,7 +685,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
       </div>
     </div>
     <div id="radar-legend" style="display:flex;gap:8px 16px;flex-wrap:wrap;margin-top:1rem;font-size:.75rem;"></div>
-    <div class="chart-source">Source: Jadual 3, 5 & 9, DTS 2024</div>
+    <div class="chart-source">Source: Tourism Malaysia DTS 2024, Jadual 3, 5 & 9</div>
   </div>
 </section>
 
@@ -1359,9 +1393,9 @@ const urMulti = {
 };
 
 const urAnnotations = {
-  visitors:    '<strong>Urban dominance holds steady:</strong> Urban tourists have accounted for over 80% of all domestic trips every year since 2019, with the share edging up from 80.2% to 82.1% by 2024 as urban population grows.',
-  expenditure: '<strong>Spending mirrors visitors:</strong> Urban areas generate roughly 82% of total tourism expenditure, closely tracking their visitor share — suggesting similar spending patterns per person between urban and rural tourists.',
-  overnight:   '<strong>Rural overnight premium widens:</strong> Rural tourists staying overnight spent RM857 per trip in 2024 — up 40% from RM612 in 2019 — and now spend 43% more than urban overnight tourists (RM600). The gap is growing, reflecting longer rural journeys and more comprehensive packages.'
+  visitors:    '<strong>Urban dominance holds steady:</strong><br>Urban tourists have exceeded 80% of all trips<br>every year since 2019.<br>The share edged up from 80.2% to 82.1% by 2024.',
+  expenditure: '<strong>Spending mirrors visitors:</strong><br>Urban areas generate roughly 82% of expenditure,<br>closely tracking their visitor share —<br>suggesting similar per-person spending patterns.',
+  overnight:   '<strong>Rural overnight premium widens:</strong><br>Rural tourists spent RM857 per trip in 2024 —<br>up 40% from RM612 in 2019.<br>They now spend 43% more than urban tourists (RM600).'
 };
 
 function buildUrbanRural(view) {
