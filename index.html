@@ -63,7 +63,7 @@ body { background: var(--paper); color: var(--ink); font-family: var(--font-body
 .chart-source { font-size: .72rem; color: var(--ink-faint); margin-top: .75rem; font-style: italic; }
 
 #malaysia-map svg { width: 100%; height: auto; }
-.tooltip { position: fixed; background: var(--ink); color: var(--paper); padding: .5rem .85rem; border-radius: 6px; font-size: .78rem; pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 999; white-space: nowrap; }
+.tooltip { position: fixed; background: var(--ink); color: var(--paper); padding: .6rem .9rem; border-radius: 7px; font-size: .78rem; pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 999; white-space: normal; min-width: 230px; line-height: 1.65; }
 .tooltip.visible { opacity: 1; }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -225,10 +225,13 @@ footer a { color: var(--accent-gold); text-decoration: none; }
 <div class="tooltip" id="tooltip"></div>
 <script>
 // Global instant tooltip for all data-tip= elements
-// Appears on mousemove with zero delay — no native title= slowness
+// Uses a flag so D3 map tooltip can coexist without conflict
 (function() {
   const tip = document.getElementById('tooltip');
+  window._mapTooltipActive = false; // set true when D3 map controls the tooltip
+
   document.addEventListener('mousemove', function(e) {
+    if (window._mapTooltipActive) return; // let D3 handle it
     const el = e.target.closest('[data-tip]');
     if (el) {
       tip.innerHTML = el.getAttribute('data-tip');
@@ -241,6 +244,7 @@ footer a { color: var(--accent-gold); text-decoration: none; }
   });
   document.addEventListener('mouseleave', function() {
     tip.classList.remove('visible');
+    window._mapTooltipActive = false;
   });
 })();
 </script>
@@ -874,15 +878,33 @@ function buildMap(metric) {
         const mappedName = nameMap[d.properties.Name] || d.properties.Name;
         const sd = dataMap[mappedName];
         if (!sd) return;
-        const val = metric === 'arr2024' ? (sd.arr2024/1000).toFixed(1)+'M'
-                  : metric === 'per1000' ? sd.per1000.toLocaleString()
-                  : sd.yoy+'%';
-        tooltip.innerHTML = `<strong>${d.properties.Name}</strong><br>${val} ${metricLabel[metric]}`;
+        window._mapTooltipActive = true;
+        const rows = [
+          { key:'per1000', label:'Visitors per 1,000 residents', val: sd.per1000.toLocaleString() },
+          { key:'arr2024', label:'Total arrivals',               val: (sd.arr2024/1000).toFixed(1) + 'M' },
+          { key:'yoy',     label:'Year-on-year growth',          val: sd.yoy + '%' },
+        ];
+        const rowsHtml = rows.map(r => {
+          const isActive = r.key === metric;
+          return `<div style="display:flex;justify-content:space-between;gap:12px;
+                    ${isActive ? 'font-weight:600;' : 'opacity:.7;'}">
+            <span>${r.label}</span>
+            <span>${r.val}</span>
+          </div>`;
+        }).join('');
+        tooltip.innerHTML = `
+          <div style="font-weight:700;margin-bottom:5px;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:4px;">
+            ${d.properties.Name}
+          </div>
+          ${rowsHtml}`;
         tooltip.classList.add('visible');
-        tooltip.style.left = (event.clientX + 12) + 'px';
-        tooltip.style.top = (event.clientY - 36) + 'px';
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY - 10) + 'px';
       })
-      .on('mouseleave', () => tooltip.classList.remove('visible'));
+      .on('mouseleave', () => {
+        tooltip.classList.remove('visible');
+        window._mapTooltipActive = false;
+      });
 
     // State labels
     svg.selectAll(null).data(featureSet).join('text')
